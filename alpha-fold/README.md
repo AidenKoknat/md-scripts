@@ -8,6 +8,7 @@
   * Download the v4_updated_accessions.txt from the AF website. To sample from the whole AF database, use accessions_id.csv.
   * Create batch1 csv: python3 **[select-samples.py](./v4-data-download/select-samples.py)** accessions_id.csv 1
   * Create batches 2-5: ./**[make-batches.sh](./v4-data-download/make-batches.sh)**
+    * Note, the make-batches command uses accession_ids.csv versus accessions_id.csv which is used up until then. Should this be fixed to match?
   * Create download urls for each batch e.g. for batch1: python3 **[create-url-list.py](./v4-data-download/create-url-list.py)** batch1.csv url-batch1.csv
   * Download pdb files using urls e.g. for batch1: ./**[download-mcc.sh](./v4-data-download/download-mcc.sh)** url-batch1.csv
 - Convert pdb to dssp/dat files using **[dssp-pdb2dat.sh](./re-download/dssp-pdb2dat.sh)** or Dr Shao's version **[shao-scripts](./shao-scripts)**.
