@@ -14,6 +14,7 @@
   * Download pdb files using urls e.g. for batch1: ./**[download-mcc.sh](./v4-data-download/download-mcc.sh)** url-batch1.csv
     * If 'permission denied error occurs, do the same command as above but replace make-batches.sh with download-mcc.sh
     * Also, this will flood your directory with pdb files. The process also might take a bit, let it run and don't stop it or you'll miss some data.
+    * There's a lot of "failed: Cannot assign requested access. Retrying" errors... but I'm just going to let it keep doing it's thing.
 - Convert pdb to dssp/dat files using **[dssp-pdb2dat.sh](./re-download/dssp-pdb2dat.sh)** or Dr Shao's version **[shao-scripts](./shao-scripts)**.
 - Convert dssp/dat to out files using **[dat-to-out.py](./re-download/dat-to-out.py)** and **[submit-dat-to-out.sh](./re-download/submit-dat-to-out.sh)**.
 - Use the scripts here **[dat-and-csv-generation](./dat-and-csv-generation)** for residue and secondary structure (ss) analysis:
