@@ -2,8 +2,20 @@
 ## Python and Bash scripts that help preprocess and analyze the AlphaFold database for protein structure predictions
 ### Most of the scripts here depend on other scripts, so make sure you open each script to know what inputs and scripts are required for each step. A lot of the SLURM scripts are necessary because some jobs take roughly a day for 1million protein structures. You can reduce that by playing around with parallelization, assuming you have the resources.
 
+### Steps for getting on your terminal to work with AlphaFold (do this after initial setup with the MCC):
+- Get on your terminal (type cmd into the Windows search bar if you are unfamiliar)
+- Type "ssh yourlinkblue@mcc.uky.edu" and hit enter, for example: "ssh jasm123@uky.edu"
+  * This connects you to the campus virtual machine so your computer doesn't have to personally do millions of lines of code.
+- Type "cd /scratch/yourlinkblue/" and hit enter. For example: "cd /scratch/jasm123/"
+  * This changes your directory to your personal scratch directory. This is an organized space to hold the alpha data.
+- Type "source /home/yourlinkblue/.bashrc" and hit enter. Change 'yourlinkblue' with your linkblue, you know the drill.
+- Type "conda activate py310" and hit enter.
+  * This allows your terminal to run python3 commands, essential to doing most of the code execution for this project. 'py310' is just what I called my python3 download, if you don't have it downloaded yet you'll have to do a bunch of extra stuff to save a version of python3 to be used.
+- Now you should be able to create an alpha-fold folder to store all your stuff in! Just type "mkdir alpha-fold" and hit enter to create the folder. Then type "cd alpha-fold" and hit enter to access that folder. Do all your work while in that folder.
+
 ### Steps for processing AlphaFold DB for analysis:
 - Download pdb from AlphaFold DB using **[pdb-downloader.sh](./re-download/pdb-downloader.sh)** or Dr Shao's scripts **[shao-scripts](./shao-scripts)**.
+  * To execute a .sh file, save the file (you can copy and paste the code into a notepad and then save as pdb-downloader.sh, and it should turn into a executable file). Then, in the terminal directory you want to execute the file in (probably in a designated alpha-fold directory), type "bash [FILE_NAME]" and click enter. In this case the command would be "bash pdb-downloader.sh". 
   * For v4 AF database, copy all the scripts in **[v4-data-download](./v4-data-download)** to a folder and follow these steps:
   * Download the v4_updated_accessions.txt from the AF website. To sample from the whole AF database, use accessions_id.csv.
   * Create batch1 csv: python3 **[select-samples.py](./v4-data-download/select-samples.py)** accessions_id.csv 1
