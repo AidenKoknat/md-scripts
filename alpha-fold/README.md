@@ -7,7 +7,7 @@
 - Type "ssh yourlinkblue@mcc.uky.edu" and hit enter, for example: "ssh jasm123@uky.edu"
   * This connects you to the campus virtual machine so your computer doesn't have to personally do millions of lines of code.
 - Type "cd /scratch/yourlinkblue/" and hit enter. For example: "cd /scratch/jasm123/"
-  * This changes your directory to your personal scratch directory. This is an organized space to hold the alpha data.
+  * This changes your directory to your personal scratch directory. This is an organized space to hold the AlphaFold data.
 - Type "source /home/yourlinkblue/.bashrc" and hit enter. Change 'yourlinkblue' with your linkblue, you know the drill.
 - Type "conda activate py310" and hit enter.
   * This allows your terminal to run python3 commands, essential to doing most of the code execution for this project. 'py310' is just what I called my python3 download, if you don't have it downloaded yet you'll have to do a bunch of extra stuff to save a version of python3 to be used.
