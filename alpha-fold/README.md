@@ -29,7 +29,7 @@
     * There's a lot of "failed: Cannot assign requested access. Retrying" errors... but I'm just going to let it keep doing it's thing.
     * This process typically takes around 30-40 minutes. Once it finishes running, you can enter the command: "ls -U | head -4". This will show the first 4 files in the directory, which should hopfully be pdb files (if you just type "ls" it will try to show millions of files, which will break things).
 - Convert pdb to dssp/dat files using **[dssp-pdb2dat.sh](./re-download/dssp-pdb2dat.sh)** or Dr Shao's version **[shao-scripts](./shao-scripts)**.
-  * In order to execute dssp-pdb2dat.sh properly (at least for windows), you need to install dssp-wsl and wsl. dssp-wsl can be installed by entering "pip install dssp-wsl" and wsl can be installed by entering "wsl--install". You'll propably have to restart your device after wsl is installed.
+  * In order to execute dssp-pdb2dat.sh properly, you need to install dssp. You can do this by entering "conda install -c salilab dssp" in the command line. Then the above step should work fine.
 - Convert dssp/dat to out files using **[dat-to-out.py](./re-download/dat-to-out.py)** and **[submit-dat-to-out.sh](./re-download/submit-dat-to-out.sh)**.
 - Use the scripts here **[dat-and-csv-generation](./dat-and-csv-generation)** for residue and secondary structure (ss) analysis:
   * Residues are stored in dat files e.g. ALA.dat or VAL.dat. To generate them, use **[submit-res_out_2_dat_v2.sh](./dat-and-csv-generation/submit-res_out_2_dat_v2.sh)** and **[res_out_2_dat_v2.sh](./dat-and-csv-generation/res_out_2_dat_v2.sh)** to extract residue, PLDDT and ss info from the out files in the directory:
