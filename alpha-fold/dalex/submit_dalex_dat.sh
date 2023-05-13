@@ -7,7 +7,7 @@
 #SBATCH --partition=normal          # Partition/queue to run the job in. (REQUIRED)
 #SBATCH -e slurm-dalex-res5-%j.err             # Error file for this job.
 #SBATCH -o slurm-dalex-res5-%j.out             # Output file for this job.
-#SBATCH -A coa_qsh226_uksr       # Project allocation account name (REQUIRED)
+#SBATCH -A ###       # Project allocation account name (REQUIRED)
 #SBATCH --mail-type ALL         # Send email when job starts/ends
 #SBATCH --mail-user amko248@uky.edu   # Where email is sent to (optional)
 
